@@ -22,10 +22,9 @@ const galleryItemsList = document.querySelector(".gallery");
 
 galleryItemsList.insertAdjacentHTML('beforeend', gallerySortMarkup);
 
-let gallery = new SimpleLightbox('.gallery a');
-gallery.on('show.simplelightbox',  {
-    caption: true,
-    captionsData: alt,
+let lightbox = new SimpleLightbox('.gallery a', {
+    captions: true,
+    captionsData: "alt",
     captionDelay: 250,
 
 });
